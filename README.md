@@ -68,6 +68,9 @@ class MainApp extends StatelessWidget {
 }
 ```
 
+![screenshoot](./example/screenshoot.png)
+
+
 License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/elrizwiraswara/regexed_text?tab=MIT-1-ov-file) file for details.
