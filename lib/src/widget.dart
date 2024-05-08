@@ -10,7 +10,7 @@ class RegexedText extends Text {
   // This function is used to get the style for each pattern.
   final TextStyle? Function(RegExp?) regexedStyle;
   // The function to call when a highlighted text is tapped.
-  final Function(String) onTap;
+  final Function(String)? onTap;
 
   const RegexedText(
     super.data, {
@@ -31,7 +31,7 @@ class RegexedText extends Text {
     super.textHeightBehavior,
     super.textScaler,
     super.textWidthBasis,
-    required this.onTap,
+    this.onTap,
   });
 
   @override
@@ -84,7 +84,7 @@ class RegexedText extends Text {
         TextSpan(
           text: '$word ',
           style: style ?? normalStyle,
-          recognizer: (style != null) ? (TapGestureRecognizer()..onTap = () => onTap(word)) : null,
+          recognizer: (style != null && onTap != null) ? (TapGestureRecognizer()..onTap = () => onTap!(word)) : null,
         ),
       );
     }
