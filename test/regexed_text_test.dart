@@ -5,7 +5,10 @@ import 'package:regexed_text/regexed_text.dart';
 void main() {
   group('RegexedText Widget Tests', () {
     testWidgets('RegexedText has correct TextSpans and styles', (tester) async {
-      TextStyle regexedStyle = const TextStyle(color: Colors.red, fontWeight: FontWeight.w600);
+      TextStyle regexedStyle = const TextStyle(
+        color: Colors.red,
+        fontWeight: FontWeight.w600,
+      );
 
       await tester.pumpWidget(
         MaterialApp(
@@ -27,13 +30,19 @@ void main() {
       final richText = tester.firstWidget<RichText>(richTextFinder);
       final textSpan = richText.text as TextSpan;
 
-      final highlightedText = textSpan.children?.where((e) => e.style == regexedStyle);
+      final highlightedText = textSpan.children?.where(
+        (e) => e.style == regexedStyle,
+      );
 
       expect(highlightedText, isNotNull);
     });
 
-    testWidgets('The onTap callback is triggered on the highlighted text', (tester) async {
-      TextStyle regexedStyle = const TextStyle(color: Colors.red, fontWeight: FontWeight.w600);
+    testWidgets('The onTap callback is triggered on the highlighted text',
+        (tester) async {
+      TextStyle regexedStyle = const TextStyle(
+        color: Colors.red,
+        fontWeight: FontWeight.w600,
+      );
       String? tappedText;
 
       await tester.pumpWidget(

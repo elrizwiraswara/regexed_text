@@ -1,15 +1,20 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+/// [RegexedText] A Text widget to provide additional functionality
+/// for highlighting text that matches a given list of patterns
 class RegexedText extends Text {
-  // The list of patterns to match in the text.
+  /// [patterns] The list of patterns to match in the text.
   final List<RegExp> patterns;
-  // The style to apply to normal (non-matching) text.
+
+  /// [normalStyle] The style to apply to normal (non-matching) text.
   final TextStyle normalStyle;
-  // A function that takes a RegExp and returns a TextStyle.
+
+  /// [regexedStyle] A function that takes a RegExp and returns a TextStyle.
   // This function is used to get the style for each pattern.
   final TextStyle? Function(RegExp?) regexedStyle;
-  // The function to call when a highlighted text is tapped.
+
+  /// [onTap] The function to call when a highlighted text is tapped.
   final Function(String)? onTap;
 
   const RegexedText(
@@ -84,7 +89,9 @@ class RegexedText extends Text {
         TextSpan(
           text: '$word ',
           style: style ?? normalStyle,
-          recognizer: (style != null && onTap != null) ? (TapGestureRecognizer()..onTap = () => onTap!(word)) : null,
+          recognizer: (style != null && onTap != null)
+              ? (TapGestureRecognizer()..onTap = () => onTap!(word))
+              : null,
         ),
       );
     }

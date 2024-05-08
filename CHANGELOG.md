@@ -10,3 +10,7 @@
 ## 0.0.3
 
 * Updated pubspec.yaml
+
+## 0.0.4
+
+* Improve structure / format the code 

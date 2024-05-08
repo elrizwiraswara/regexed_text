@@ -27,22 +27,41 @@ class MainApp extends StatelessWidget {
           padding: const EdgeInsets.all(18),
           child: RegexedText(
             longTextExample,
-            patterns: [usernamePattern, urlPattern, emailPattern, hashtagPattern, phoneNumberPattern, datePattern],
+            patterns: [
+              usernamePattern,
+              urlPattern,
+              emailPattern,
+              hashtagPattern,
+              phoneNumberPattern,
+              datePattern,
+            ],
             normalStyle: const TextStyle(color: Colors.black),
             regexedStyle: (pattern) {
               if (pattern == usernamePattern) {
-                return const TextStyle(color: Colors.red, fontWeight: FontWeight.w600);
+                return const TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.w600,
+                );
               }
 
               if (pattern == hashtagPattern) {
-                return const TextStyle(color: Colors.blue, fontWeight: FontWeight.w600);
+                return const TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.w600,
+                );
               }
 
               if (pattern == datePattern) {
-                return const TextStyle(color: Colors.black, fontWeight: FontWeight.w600);
+                return const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                );
               }
 
-              return const TextStyle(color: Colors.blue, decoration: TextDecoration.underline);
+              return const TextStyle(
+                color: Colors.blue,
+                decoration: TextDecoration.underline,
+              );
             },
             onTap: (text) {
               print(text);
