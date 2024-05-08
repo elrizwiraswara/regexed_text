@@ -1,7 +1,7 @@
 name: regexed_text
 description: "This package extends the Text widget to provide additional functionality for highlighting text that matches a given list of patterns."
 version: 0.0.1
-homepage: https://github.com/elrizwiraswara/regexed_text
+repository: https://github.com/elrizwiraswara/regexed_text
 
 environment:
   sdk: '>=3.3.1 <4.0.0'
@@ -15,6 +15,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+
+platforms:
+  android:
+  ios:
+  macos:
+  web:
+  windows:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
