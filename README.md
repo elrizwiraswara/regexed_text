@@ -68,7 +68,7 @@ class MainApp extends StatelessWidget {
 }
 ```
 
-![screenshoot](./example/screenshoot.png)
+![screenshoot](https://raw.githubusercontent.com/elrizwiraswara/regexed_text/main/example/screenshoot.png)
 
 
 License
