@@ -10,6 +10,8 @@ This package extends the Text widget to provide additional functionality for hig
 
 ##### Example
 
+![screenshoot](https://raw.githubusercontent.com/elrizwiraswara/regexed_text/main/example/screenshoot.png)
+
 ```dart
 import 'package:flutter/material.dart';
 import 'package:regexed_text/regexed_text.dart';
@@ -67,8 +69,6 @@ class MainApp extends StatelessWidget {
   }
 }
 ```
-
-![screenshoot](https://raw.githubusercontent.com/elrizwiraswara/regexed_text/main/example/screenshoot.png)
 
 
 License
