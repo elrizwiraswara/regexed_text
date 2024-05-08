@@ -23,6 +23,17 @@ platforms:
   web:
   windows:
 
+topics:
+  - regular-expression
+  - highlight
+  - text
+  - rich-text
+  - text-style
+  - link
+  - hyperlink
+  - clickable
+
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
