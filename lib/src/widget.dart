@@ -12,10 +12,10 @@ class RegexedText extends Text {
 
   /// [regexedStyle] A function that takes a RegExp and returns a TextStyle.
   // This function is used to get the style for each pattern.
-  final TextStyle? Function(RegExp?) regexedStyle;
+  final TextStyle? Function(RegExp) regexedStyle;
 
   /// [onTap] The function to call when a highlighted text is tapped.
-  final Function(String)? onTap;
+  final Function(String, RegExp)? onTap;
 
   const RegexedText(
     super.data, {
@@ -68,14 +68,16 @@ class RegexedText extends Text {
 
     // Iterate over each word in the list.
     for (var word in words) {
-      // Initialize a variable to hold the style for the current word.
+      // Initialize a variable to hold the style & matched pattern for the current word.
       TextStyle? style;
+      RegExp? match;
 
       // Iterate over each pattern in the list.
       for (var pattern in patterns) {
         // If the pattern matches the word, get the style for this pattern.
         if (pattern.hasMatch(word)) {
           style = regexedStyle(pattern);
+          match = pattern;
           // Break the loop as soon as a match is found.
           break;
         }
@@ -90,7 +92,7 @@ class RegexedText extends Text {
           text: '$word ',
           style: style ?? normalStyle,
           recognizer: (style != null && onTap != null)
-              ? (TapGestureRecognizer()..onTap = () => onTap!(word))
+              ? (TapGestureRecognizer()..onTap = () => onTap!(word, match!))
               : null,
         ),
       );

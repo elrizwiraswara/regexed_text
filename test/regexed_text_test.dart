@@ -43,7 +43,9 @@ void main() {
         color: Colors.red,
         fontWeight: FontWeight.w600,
       );
+
       String? tappedText;
+      RegExp? tappedPattern;
 
       await tester.pumpWidget(
         MaterialApp(
@@ -54,8 +56,9 @@ void main() {
               regexedStyle: (pattern) {
                 return regexedStyle;
               },
-              onTap: (text) {
+              onTap: (text, pattern) {
                 tappedText = text;
+                tappedPattern = pattern;
               },
             ),
           ),
@@ -70,6 +73,7 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(tappedText, '@sample');
+      expect(tappedPattern, usernamePattern);
     });
   });
 }

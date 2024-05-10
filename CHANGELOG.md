@@ -14,3 +14,7 @@
 ## 0.0.4
 
 * Improve structure / format the code 
+
+## 0.0.5
+
+* Added pattern parameter into [onTap]

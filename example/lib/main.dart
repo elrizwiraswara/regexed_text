@@ -63,8 +63,13 @@ class MainApp extends StatelessWidget {
                 decoration: TextDecoration.underline,
               );
             },
-            onTap: (text) {
+            onTap: (text, pattern) {
               print(text);
+              print(pattern);
+
+              if (pattern == urlPattern) {
+                // Launch [text] with url_launcher or something
+              }
             },
           ),
         ),
