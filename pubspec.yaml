@@ -1,6 +1,6 @@
 name: regexed_text
 description: "This package extends the Text widget to provide additional functionality for highlighting text that matches a given list of patterns."
-version: 0.0.5
+version: 0.0.6
 repository: https://github.com/elrizwiraswara/regexed_text
 
 environment:

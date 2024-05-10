@@ -18,3 +18,7 @@
 ## 0.0.5
 
 * Added pattern parameter into [onTap]
+
+## 0.0.6
+
+* Updated README.md
