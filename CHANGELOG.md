@@ -1,24 +1,28 @@
-## 0.0.1
+## 0.0.7
 
-* Initial release.
-    * This package extends the Text widget to provide additional functionality for highlighting text that matches a given list of patterns.
+* Updated README.md
 
-## 0.0.2
+## 0.0.6
 
-* Updated pubspec.yaml
-
-## 0.0.3
-
-* Updated pubspec.yaml
-
-## 0.0.4
-
-* Improve structure / format the code 
+* Updated README.md
 
 ## 0.0.5
 
 * Added pattern parameter into [onTap]
 
-## 0.0.6
+## 0.0.4
 
-* Updated README.md
+* Improve structure / format the code 
+
+## 0.0.3
+
+* Updated pubspec.yaml
+
+## 0.0.2
+
+* Updated pubspec.yaml
+
+## 0.0.1
+
+* Initial release.
+    * This package extends the Text widget to provide additional functionality for highlighting text that matches a given list of patterns.
