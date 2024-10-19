@@ -1,14 +1,26 @@
-### RegexedText
+## RegexedText
 
 This package extends the Text widget to provide additional functionality for highlighting text that matches a given list of RegExp patterns.
 
-##### Key Features
+### Key Features
 
 - Highlight parts of the text that match certain patterns. Each pattern can have its own unique style.
 - Handle taps on a part of the text that matches a pattern.
 - Extend the functionality of the Flutter `Text` widget.
 
-##### Example
+## Installation
+
+Add the following to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  regexed_text: ^0.0.7
+```
+
+Then run `flutter pub get` to install the package.
+
+## Usage
+### Basic Usage
 
 ![screenshoot](https://raw.githubusercontent.com/elrizwiraswara/regexed_text/main/example/screenshoot.png)
 
@@ -95,6 +107,6 @@ class MainApp extends StatelessWidget {
 ```
 
 
-License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/elrizwiraswara/regexed_text?tab=MIT-1-ov-file) file for details.
